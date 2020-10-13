@@ -5,7 +5,11 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
-
+/*
+ * ProximityIterator iterates through all of the Driver objects in the collection 
+ * that have a Manhattan distance to the provided client_position that is less than or equal to proximity_limit. 
+ * If next() is called but there is no next eligible driver, it throws a NoSuchElementException.
+ */
 public class ProximityIterator implements Iterator<Driver>{
 	
 	private Iterator<Driver> iter;
