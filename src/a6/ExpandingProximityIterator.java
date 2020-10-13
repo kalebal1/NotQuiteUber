@@ -6,6 +6,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+/*
+ * Iterates through all Driver objects with a Manhattan distane
+ * to provided client_position <= 1. After all those drivers have 
+ * been exhausted, it starts at the beginning of the pool and iterates
+ * through drivers that have a distance greater than one but less than 1 + expansion step.
+ * Basically this slowly increases the radius of the search until there's no more drivers.
+ */
+
 public class ExpandingProximityIterator implements Iterator<Driver> {
 	
 	private Iterator<Driver> iter;
